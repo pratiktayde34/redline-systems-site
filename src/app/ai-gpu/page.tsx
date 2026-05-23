@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "AI & GPU Server Infrastructure",
+  description: "Advanced multi-GPU compute nodes for local AI inferencing, LLMs, and scientific simulation. Built on NVIDIA, AMD, and enterprise architectures.",
+  alternates: { canonical: "/ai-gpu" }
+};
 import { ArrowRight } from "lucide-react";
 
 export default function AIGPU() {

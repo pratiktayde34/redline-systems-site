@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Professional Engineering Workstations",
+  description: "Threadripper and high-IPC workstations engineered for CAD, BIM, simulation, rendering, and professional visual pipelines.",
+  alternates: { canonical: "/workstations" }
+};
 import { ArrowRight } from "lucide-react";
 
 export default function Workstations() {

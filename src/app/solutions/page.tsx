@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Infrastructure Solutions",
+  description: "Explore our range of purpose-built infrastructure solutions including AI servers, CAD workstations, and TrueNAS storage arrays.",
+  alternates: { canonical: "/solutions" }
+};
 import { ArrowRight, Cpu, HardDrive, MonitorPlay, ShieldCheck, Settings } from "lucide-react";
 
 export default function Solutions() {

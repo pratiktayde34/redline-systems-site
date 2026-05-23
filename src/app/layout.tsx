@@ -17,8 +17,28 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Redline Systems Infrastructure",
+  metadataBase: new URL("https://redlinesystems.in"),
+  title: {
+    default: "Redline Systems | Server & Storage Infrastructure",
+    template: "%s | Redline Systems"
+  },
   description: "Redline Systems designs and deploys workstation, server, storage, and GPU infrastructure for engineering teams, studios, educational institutes, and businesses across Maharashtra.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Redline Systems | Server & Storage Infrastructure",
+    description: "Redline Systems designs and deploys workstation, server, storage, and GPU infrastructure for engineering teams, studios, educational institutes, and businesses across Maharashtra.",
+    url: "https://redlinesystems.in",
+    siteName: "Redline Systems",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Redline Systems | Server & Storage Infrastructure",
+    description: "Redline Systems designs and deploys workstation, server, storage, and GPU infrastructure for engineering teams, studios, educational institutes, and businesses across Maharashtra.",
+  },
 };
 
 export default function RootLayout({

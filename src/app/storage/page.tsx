@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Enterprise NAS & Storage Systems",
+  description: "ZFS-based storage infrastructure for high availability, redundancy, and automated backup. Perfect for studios, clinics, and enterprises.",
+  alternates: { canonical: "/storage" }
+};
 import { ArrowRight } from "lucide-react";
 
 export default function StorageBackup() {

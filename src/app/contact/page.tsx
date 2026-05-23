@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { MapPin, Phone, Mail, CheckCircle2 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Contact Engineering",
+  description: "Schedule a free infrastructure assessment or request a quote for your custom server, workstation, or storage deployment.",
+  alternates: { canonical: "/contact" }
+};
 
 export default function Contact() {
   return (
