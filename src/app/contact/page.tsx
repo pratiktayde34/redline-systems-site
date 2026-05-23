@@ -116,6 +116,7 @@ export default function Contact() {
                     <option value="cad">CAD / BIM / Simulation</option>
                     <option value="storage">Centralized Storage / TrueNAS</option>
                     <option value="virtualization">Virtualization / Proxmox</option>
+                    <option value="other">Other</option>
                   </select>
                 </div>
 
