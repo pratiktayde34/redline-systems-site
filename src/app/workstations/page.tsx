@@ -28,7 +28,7 @@ export default function Workstations() {
             {["SolidWorks", "Revit", "Blender", "Unreal Engine", "DaVinci Resolve", "Adobe Suite"].map(app => (
               <div key={app} className="flex flex-col items-center gap-2 group w-16">
                 <div className="w-16 h-16 rounded-xl overflow-hidden bg-background border border-border group-hover:border-primary/50 transition-colors flex items-center justify-center shadow-md">
-                  <img fetchpriority="high" decoding="async" 
+                  <img fetchPriority="high" decoding="async" 
                     src={`/images/icons/${app.toLowerCase().replace(' ', '-')}.png`} 
                     alt={app} 
                     className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"

@@ -9,7 +9,7 @@ export default function Home() {
       <HeroFlashlight className="min-h-[90vh] flex items-center justify-center pt-24 pb-16 bg-black">
         {/* Darkened Background */}
         <div className="absolute inset-0 z-0">
-          <img fetchpriority="high" decoding="async" 
+          <img fetchPriority="high" decoding="async" 
             src="/images/hero-bg.jpg" 
             alt="Data Center" 
             className="w-full h-full object-cover opacity-25"

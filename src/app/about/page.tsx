@@ -18,7 +18,7 @@ export default function AboutPage() {
         </div>
         
         <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center">
-          <img src="/logo.png" alt="Redline Systems Logo" className="h-16 w-auto mb-8 opacity-90" loading="eager" fetchpriority="high" />
+          <img src="/logo.png" alt="Redline Systems Logo" className="h-16 w-auto mb-8 opacity-90" loading="eager" fetchPriority="high" />
           <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight mb-6 text-balance text-white">
             About <span className="text-primary">Red</span>line Systems
           </h1>

@@ -40,7 +40,7 @@ export default function StorageBackup() {
             </Link>
           </div>
           <div className="relative h-[400px] lg:h-[500px]">
-            <img fetchpriority="high" decoding="async" src="/images/storage-hero.jpg" alt="Storage Racks" className="w-full h-full object-cover rounded border border-border shadow-2xl opacity-80" />
+            <img fetchPriority="high" decoding="async" src="/images/storage-hero.jpg" alt="Storage Racks" className="w-full h-full object-cover rounded border border-border shadow-2xl opacity-80" />
           </div>
         </div>
       </section>
