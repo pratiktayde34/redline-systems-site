@@ -14,9 +14,8 @@ export default function StorageBackup() {
       <section className="relative min-h-[60vh] flex items-center pt-24 pb-16 overflow-hidden bg-background">
         <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-8 h-[2px] bg-primary"></div>
-              <span className="font-display text-xs font-bold tracking-[0.2em] uppercase text-primary">
+            <div className="inline-flex items-center px-4 py-2 border border-primary/30 bg-primary/10 backdrop-blur-sm mb-6">
+              <span className="font-display text-[11px] font-bold tracking-[0.2em] uppercase text-white">
                 High-Availability Data Architectures
               </span>
             </div>
@@ -41,7 +40,7 @@ export default function StorageBackup() {
             </Link>
           </div>
           <div className="relative h-[400px] lg:h-[500px]">
-            <img src="/images/storage-hero.jpg" alt="Storage Racks" className="w-full h-full object-cover rounded border border-border shadow-2xl opacity-80" />
+            <img fetchpriority="high" decoding="async" src="/images/storage-hero.jpg" alt="Storage Racks" className="w-full h-full object-cover rounded border border-border shadow-2xl opacity-80" />
           </div>
         </div>
       </section>

@@ -8,8 +8,21 @@
   --red: #D42B2B;
   --red-dim: #9A1F1F;
   --text: #EFEFEF;
-  --muted: #888888;
-  --faint: #444444;
+  --muted: #A3A3A3;
+  --faint: #737373;
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+/* Prevent images from being dragged or selected */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-select: none;
 }
 
 @theme inline {
@@ -23,8 +36,8 @@
   --color-muted: var(--muted);
   --color-faint: var(--faint);
   
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-google-sans), sans-serif;
+  --font-display: var(--font-google-sans), sans-serif;
 }
 
 body {

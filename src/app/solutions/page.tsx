@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Explore our range of purpose-built infrastructure solutions including AI servers, CAD workstations, and TrueNAS storage arrays.",
   alternates: { canonical: "/solutions" }
 };
-import { ArrowRight, Cpu, HardDrive, MonitorPlay, ShieldCheck, Settings } from "lucide-react";
+import { ArrowRight, Cpu, HardDrive, MonitorPlay, ShieldCheck, Settings, Server } from "lucide-react";
 
 export default function Solutions() {
   return (
@@ -49,14 +49,14 @@ export default function Solutions() {
               </Link>
             </div>
             <div className="order-1 lg:order-2 h-[400px] border border-border rounded overflow-hidden">
-              <img src="/images/solutions-ai.jpg" alt="AI GPU Server" className="w-full h-full object-cover opacity-70" />
+              <img loading="lazy" decoding="async" src="/images/solutions-ai.jpg" alt="AI GPU Server" className="w-full h-full object-cover opacity-70" />
             </div>
           </div>
 
           {/* Solution 2: Storage */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="h-[400px] border border-border rounded overflow-hidden">
-              <img src="/images/solutions-storage.jpg" alt="Enterprise Storage" className="w-full h-full object-cover opacity-70" />
+              <img loading="lazy" decoding="async" src="/images/solutions-storage.jpg" alt="Enterprise Storage" className="w-full h-full object-cover opacity-70" />
             </div>
             <div>
               <div className="flex items-center gap-3 mb-4">
@@ -99,7 +99,32 @@ export default function Solutions() {
               </Link>
             </div>
             <div className="order-1 lg:order-2 h-[400px] border border-border rounded overflow-hidden">
-              <img src="/images/solutions-workstation.jpg" alt="Workstation Setup" className="w-full h-full object-cover opacity-70" />
+              <img loading="lazy" decoding="async" src="/images/solutions-workstation.jpg" alt="Workstation Setup" className="w-full h-full object-cover opacity-70" />
+            </div>
+          </div>
+
+          {/* Solution 4: Homelab */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="h-[400px] border border-border rounded overflow-hidden">
+              <img loading="lazy" decoding="async" src="/images/solutions-homelab.png" alt="Custom Homelab" className="w-full h-full object-cover opacity-70" />
+            </div>
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <Server className="text-primary" size={24} />
+                <h2 className="font-display text-2xl font-bold">Custom Homelabs</h2>
+              </div>
+              <p className="text-muted leading-relaxed mb-6">
+                Take back control of your data, media, backups and applications with a custom self-hosted homelab. Replace expensive cloud subscriptions with hardware you own.
+              </p>
+              <ul className="grid grid-cols-2 gap-4 mb-8">
+                <li className="flex items-center gap-2 text-sm text-faint"><div className="w-1.5 h-1.5 bg-primary rounded-full"></div> Private Cloud Storage</li>
+                <li className="flex items-center gap-2 text-sm text-faint"><div className="w-1.5 h-1.5 bg-primary rounded-full"></div> Self-Hosted Media</li>
+                <li className="flex items-center gap-2 text-sm text-faint"><div className="w-1.5 h-1.5 bg-primary rounded-full"></div> Proxmox Virtualization</li>
+                <li className="flex items-center gap-2 text-sm text-faint"><div className="w-1.5 h-1.5 bg-primary rounded-full"></div> Local AI Models</li>
+              </ul>
+              <Link href="/homelab" className="text-primary text-sm font-bold uppercase tracking-widest flex items-center gap-2 hover:text-white transition-colors">
+                View Configurations <ArrowRight size={16} />
+              </Link>
             </div>
           </div>
 

@@ -29,9 +29,8 @@ export default function Contact() {
             
             {/* Contact Details */}
             <div>
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-8 h-[2px] bg-primary"></div>
-                <span className="font-display text-xs font-bold tracking-[0.2em] uppercase text-primary">
+              <div className="inline-flex items-center px-4 py-2 border border-primary/30 bg-primary/10 backdrop-blur-sm mb-6">
+                <span className="font-display text-[11px] font-bold tracking-[0.2em] uppercase text-white">
                   Direct Technical Communication
                 </span>
               </div>
@@ -62,7 +61,7 @@ export default function Contact() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-surface border border-border flex items-center justify-center shrink-0">
-                    <img src="https://cdn.simpleicons.org/instagram/d42b2b" alt="Instagram" className="w-5 h-5" />
+                    <img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/instagram/d42b2b" alt="Instagram" className="w-5 h-5" />
                   </div>
                   <div>
                     <div className="font-bold text-sm uppercase tracking-widest text-faint mb-1">Instagram</div>

@@ -9,7 +9,7 @@ export default function Footer() {
           
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center mb-6">
-              <img src="/logo.png" alt="Redline Systems" className="h-10 w-auto opacity-90" />
+              <img loading="lazy" decoding="async" src="/logo.png" alt="Redline Systems" className="h-10 w-auto opacity-90" />
             </Link>
             <p className="text-muted font-light max-w-sm mb-8 leading-relaxed text-sm">
               Practical infrastructure engineering and deployment company focused on compute, storage, workstation, and on-premise systems for businesses across Maharashtra.
@@ -28,7 +28,7 @@ export default function Footer() {
                 <a href="mailto:contact@redlinesystems.in" className="text-sm hover:text-white transition-colors">contact@redlinesystems.in</a>
               </div>
               <div className="flex items-center gap-3 text-faint mt-2">
-                <img src="https://cdn.simpleicons.org/instagram/d42b2b" alt="Instagram" className="w-4 h-4" />
+                <img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/instagram/d42b2b" alt="Instagram" className="w-4 h-4" />
                 <a href="https://www.instagram.com/redlinesystems.in/" target="_blank" rel="noreferrer" className="text-sm hover:text-white transition-colors">@redlinesystems.in</a>
               </div>
             </div>

@@ -14,9 +14,8 @@ export default function AIGPU() {
       <section className="relative min-h-[60vh] flex items-center pt-24 pb-16 overflow-hidden bg-background">
         <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-8 h-[2px] bg-primary"></div>
-              <span className="font-display text-xs font-bold tracking-[0.2em] uppercase text-primary">
+            <div className="inline-flex items-center px-4 py-2 border border-primary/30 bg-primary/10 backdrop-blur-sm mb-6">
+              <span className="font-display text-[11px] font-bold tracking-[0.2em] uppercase text-white">
                 Total Data Privacy & Compute Ownership
               </span>
             </div>
@@ -26,11 +25,20 @@ export default function AIGPU() {
             <p className="text-lg text-muted mb-10 font-light leading-relaxed">
               Deploy local AI infrastructure with complete ownership of hardware, models, and data. Multi-GPU systems optimized for inference, simulation, rendering, and accelerated compute workloads.
             </p>
-            <div className="flex flex-wrap gap-3 mb-10">
-              {["CUDA", "TensorRT", "PyTorch", "Ollama", "Local LLMs", "Multi-GPU"].map(tag => (
-                <span key={tag} className="px-3 py-1 border border-border bg-surface text-xs font-bold tracking-widest uppercase text-muted">
-                  {tag}
-                </span>
+            <div className="flex flex-wrap gap-4 mb-10">
+              {["PyTorch", "TensorFlow", "CUDA", "OpenCV", "Ollama", "vLLM"].map(app => (
+                <div key={app} className="flex flex-col items-center gap-2 group w-16">
+                  <div className="w-16 h-16 rounded-xl overflow-hidden bg-background border border-border group-hover:border-primary/50 transition-colors flex items-center justify-center shadow-md">
+                    <img fetchpriority="high" decoding="async" 
+                      src={`/images/icons/${app.toLowerCase().replace(' ', '-')}.png`} 
+                      alt={app} 
+                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                    />
+                  </div>
+                  <span className="text-[10px] font-bold text-muted group-hover:text-white transition-colors text-center tracking-wide uppercase">
+                    {app}
+                  </span>
+                </div>
               ))}
             </div>
             <Link
@@ -41,7 +49,7 @@ export default function AIGPU() {
             </Link>
           </div>
           <div className="relative h-[400px] lg:h-[500px]">
-            <img src="/images/ai-gpu-hero.jpg" alt="GPU Server internals" className="w-full h-full object-cover rounded border border-border shadow-2xl opacity-80" />
+            <img loading="lazy" decoding="async" src="/images/ai-gpu-hero.jpg" alt="GPU Server internals" className="w-full h-full object-cover rounded border border-border shadow-2xl opacity-80" />
           </div>
         </div>
       </section>
@@ -80,7 +88,7 @@ export default function AIGPU() {
                 Complete infrastructure for research environments and educational institutes. We build highly available GPU servers that can be partitioned via virtualization (Proxmox / VMware) to serve multiple concurrent researchers.
               </p>
               <div className="relative h-[300px] w-full">
-                <img src="/images/ai-gpu-lab.jpg" alt="Lab setup" className="w-full h-full object-cover rounded opacity-70" />
+                <img loading="lazy" decoding="async" src="/images/ai-gpu-lab.jpg" alt="Lab setup" className="w-full h-full object-cover rounded opacity-70" />
               </div>
             </div>
 

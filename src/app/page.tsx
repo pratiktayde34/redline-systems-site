@@ -1,29 +1,44 @@
 import Link from "next/link";
-import { ArrowRight, Server, HardDrive, Cpu, Settings, ShieldCheck, MonitorPlay, Check } from "lucide-react";
+import { ArrowRight, Cpu, HardDrive, MonitorPlay, CheckCircle2, Server, Check } from "lucide-react";
+import HeroFlashlight from "@/components/HeroFlashlight";
 
 export default function Home() {
   return (
     <>
       {/* SHOWSTOPPER HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-black">
+      <HeroFlashlight className="min-h-[90vh] flex items-center justify-center pt-24 pb-16 bg-black">
+        {/* Darkened Background */}
         <div className="absolute inset-0 z-0">
-          <img 
+          <img fetchpriority="high" decoding="async" 
             src="/images/hero-bg.jpg" 
             alt="Data Center" 
-            className="w-full h-full object-cover opacity-30 mix-blend-overlay"
+            className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
         </div>
-        
-        {/* Subtle Glow */}
-        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
+
+        {/* Revealed Bright Background (Spotlight Effect) */}
+        <div 
+          className="hidden md:block pointer-events-none absolute inset-0 z-0 transition-opacity duration-500"
+          style={{
+            opacity: 'var(--spotlight-opacity)',
+            WebkitMaskImage: `radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), black 0%, transparent 60%)`,
+            maskImage: `radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), black 0%, transparent 60%)`,
+          }}
+        >
+          <img loading="lazy" decoding="async" 
+            src="/images/hero-bg.jpg" 
+            alt="Data Center" 
+            className="w-full h-full object-cover opacity-40 mix-blend-lighten" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+        </div>
 
         <div className="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-8 h-[2px] bg-primary"></div>
-              <span className="font-display text-xs font-bold tracking-[0.2em] uppercase text-primary">
+            <div className="inline-flex items-center px-4 py-2 border border-primary/30 bg-primary/10 backdrop-blur-sm mb-6">
+              <span className="font-display text-[11px] font-bold tracking-[0.2em] uppercase text-white">
                 Infrastructure Engineered for Workloads
               </span>
             </div>
@@ -54,7 +69,7 @@ export default function Home() {
 
 
         </div>
-      </section>
+      </HeroFlashlight>
 
       {/* TRUST / ECOSYSTEM SECTION */}
       <section className="py-12 border-y border-border bg-surface overflow-hidden">
@@ -64,14 +79,14 @@ export default function Home() {
               Built Around<br />Enterprise Platforms
             </div>
             <div className="flex flex-wrap justify-center md:justify-end items-center gap-x-16 gap-y-12">
-              <img src="/logos/nvidia.svg" alt="NVIDIA" className="h-8 w-auto object-contain" />
-              <img src="/logos/amd.svg" alt="AMD EPYC" className="h-8 w-auto object-contain" />
-              <img src="/logos/intel.svg" alt="Intel Xeon" className="h-8 w-auto object-contain" />
-              <img src="/logos/truenas.svg" alt="TrueNAS" className="h-8 w-auto object-contain" />
-              <img src="/logos/supermicro.svg" alt="Supermicro" className="h-8 w-auto object-contain" />
-              <img src="/logos/proxmox.svg" alt="Proxmox" className="h-8 w-auto object-contain" />
-              <img src="/logos/ubuntu.svg" alt="Ubuntu Server" className="h-8 w-auto object-contain" />
-              <img src="/logos/vmware.svg" alt="VMware" className="h-8 w-auto object-contain" />
+              <img loading="lazy" decoding="async" src="/logos/nvidia.svg" alt="NVIDIA" className="h-8 w-auto object-contain" />
+              <img loading="lazy" decoding="async" src="/logos/amd.svg" alt="AMD EPYC" className="h-8 w-auto object-contain" />
+              <img loading="lazy" decoding="async" src="/logos/intel.svg" alt="Intel Xeon" className="h-8 w-auto object-contain" />
+              <img loading="lazy" decoding="async" src="/logos/truenas.svg" alt="TrueNAS" className="h-8 w-auto object-contain" />
+              <img loading="lazy" decoding="async" src="/logos/supermicro.svg" alt="Supermicro" className="h-8 w-auto object-contain" />
+              <img loading="lazy" decoding="async" src="/logos/proxmox.svg" alt="Proxmox" className="h-8 w-auto object-contain" />
+              <img loading="lazy" decoding="async" src="/logos/ubuntu.svg" alt="Ubuntu Server" className="h-8 w-auto object-contain" />
+              <img loading="lazy" decoding="async" src="/logos/vmware.svg" alt="VMware" className="h-8 w-auto object-contain" />
             </div>
           </div>
         </div>
@@ -86,12 +101,12 @@ export default function Home() {
           </div>
           
           <div className="flex flex-wrap justify-center items-center gap-16 max-w-5xl mx-auto">
-            <img src="/logos/blender.svg" alt="Blender" className="h-8 w-auto object-contain" title="Blender" />
-            <img src="/logos/davinciresolve.svg" alt="DaVinci Resolve" className="h-8 w-auto object-contain" title="DaVinci Resolve" />
-            <img src="/logos/unrealengine.svg" alt="Unreal Engine" className="h-8 w-auto object-contain" title="Unreal Engine" />
-            <img src="/logos/solidworks.svg" alt="SolidWorks" className="h-8 w-auto object-contain" title="SolidWorks" />
-            <img src="/logos/autodesk.svg" alt="Revit / AutoCAD" className="h-8 w-auto object-contain" title="AutoCAD / Revit" />
-            <img src="/logos/pytorch.svg" alt="PyTorch" className="h-8 w-auto object-contain" title="PyTorch" />
+            <img loading="lazy" decoding="async" src="/logos/blender.svg" alt="Blender" className="h-8 w-auto object-contain" title="Blender" />
+            <img loading="lazy" decoding="async" src="/logos/davinciresolve.svg" alt="DaVinci Resolve" className="h-8 w-auto object-contain" title="DaVinci Resolve" />
+            <img loading="lazy" decoding="async" src="/logos/unrealengine.svg" alt="Unreal Engine" className="h-8 w-auto object-contain" title="Unreal Engine" />
+            <img loading="lazy" decoding="async" src="/logos/solidworks.svg" alt="SolidWorks" className="h-8 w-auto object-contain" title="SolidWorks" />
+            <img loading="lazy" decoding="async" src="/logos/autodesk.svg" alt="Revit / AutoCAD" className="h-8 w-auto object-contain" title="AutoCAD / Revit" />
+            <img loading="lazy" decoding="async" src="/logos/pytorch.svg" alt="PyTorch" className="h-8 w-auto object-contain" title="PyTorch" />
           </div>
         </div>
       </section>
@@ -106,7 +121,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 bg-border border border-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link href="/ai-gpu" className="relative p-10 group overflow-hidden border border-border hover:border-primary/50 transition-colors flex flex-col min-h-[320px]">
               <div 
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
@@ -160,6 +175,26 @@ export default function Home() {
                 <h3 className="font-display text-xl font-bold mb-4 text-white">Engineering Workstations</h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-8">
                   Threadripper and professional workstation systems built for CAD, rendering, BIM, and simulation workloads.
+                </p>
+                <div className="text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-primary transition-colors flex items-center gap-2 mt-auto">
+                  Explore Specs <ArrowRight size={14} />
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/homelab" className="relative p-10 group overflow-hidden border border-border hover:border-primary/50 transition-colors flex flex-col min-h-[320px]">
+              <div 
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
+                style={{ backgroundImage: 'url("/images/solutions-homelab.png")' }}
+              />
+              <div className="absolute inset-0 bg-black/85 group-hover:bg-black/75 transition-colors duration-300" />
+              <div className="absolute top-0 left-0 w-1 h-0 bg-primary group-hover:h-full transition-all duration-300 z-10"></div>
+              
+              <div className="relative z-10 flex flex-col h-full">
+                <Server className="text-primary mb-6" size={32} />
+                <h3 className="font-display text-xl font-bold mb-4 text-white">Custom Homelabs</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-8">
+                  Take back control of your data with self-hosted media, storage, and application infrastructure.
                 </p>
                 <div className="text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-primary transition-colors flex items-center gap-2 mt-auto">
                   Explore Specs <ArrowRight size={14} />
@@ -231,9 +266,8 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-16">
             <div className="lg:w-1/3">
               <div className="sticky top-32">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-8 h-[2px] bg-primary"></div>
-                  <span className="font-display text-xs font-bold tracking-[0.2em] uppercase text-primary">
+                <div className="inline-flex items-center px-4 py-2 border border-primary/30 bg-primary/10 backdrop-blur-sm mb-6">
+                  <span className="font-display text-[11px] font-bold tracking-[0.2em] uppercase text-white">
                     Deployment Workflow
                   </span>
                 </div>
@@ -255,32 +289,32 @@ export default function Home() {
             <div className="lg:w-2/3">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="border border-border p-8 bg-background">
-                  <div className="font-display text-4xl font-bold text-border mb-4">01</div>
+                  <div className="font-display text-4xl font-bold text-[#444] mb-4">0<span className="text-primary">1</span></div>
                   <h3 className="font-bold mb-2">Requirement Analysis</h3>
                   <p className="text-sm text-muted">Assessing workload requirements, storage growth, user concurrency, software stack, and operational priorities.</p>
                 </div>
                 <div className="border border-border p-8 bg-background">
-                  <div className="font-display text-4xl font-bold text-border mb-4">02</div>
+                  <div className="font-display text-4xl font-bold text-[#444] mb-4">0<span className="text-primary">2</span></div>
                   <h3 className="font-bold mb-2">Infrastructure Planning</h3>
                   <p className="text-sm text-muted">Planning hardware, networking, backup strategies, power delivery, airflow, and architectural topologies.</p>
                 </div>
                 <div className="border border-border p-8 bg-background">
-                  <div className="font-display text-4xl font-bold text-border mb-4">03</div>
+                  <div className="font-display text-4xl font-bold text-[#444] mb-4">0<span className="text-primary">3</span></div>
                   <h3 className="font-bold mb-2">Hardware Procurement</h3>
                   <p className="text-sm text-muted">Sourcing enterprise-grade components from trusted supply chains specific to the planned build.</p>
                 </div>
                 <div className="border border-border p-8 bg-background">
-                  <div className="font-display text-4xl font-bold text-border mb-4">04</div>
+                  <div className="font-display text-4xl font-bold text-[#444] mb-4">0<span className="text-primary">4</span></div>
                   <h3 className="font-bold mb-2">Deployment & Configuration</h3>
                   <p className="text-sm text-muted">Physical assembly, OS installation, network configuration, storage pool creation, and security hardening.</p>
                 </div>
                 <div className="border border-border p-8 bg-background">
-                  <div className="font-display text-4xl font-bold text-border mb-4">05</div>
+                  <div className="font-display text-4xl font-bold text-[#444] mb-4">0<span className="text-primary">5</span></div>
                   <h3 className="font-bold mb-2">Testing & Validation</h3>
                   <p className="text-sm text-muted">Burn-in testing, throughput verification, failure simulation, and workload-specific benchmarks.</p>
                 </div>
                 <div className="border border-border p-8 bg-background">
-                  <div className="font-display text-4xl font-bold text-border mb-4">06</div>
+                  <div className="font-display text-4xl font-bold text-[#444] mb-4">0<span className="text-primary">6</span></div>
                   <h3 className="font-bold mb-2">Monitoring & Expansion</h3>
                   <p className="text-sm text-muted">Ongoing health checks, capacity planning, firmware updates, and infrastructure scaling support.</p>
                 </div>
