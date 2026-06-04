@@ -62,17 +62,43 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Redline Systems",
-              "url": "https://redlinesystems.in",
-              "logo": "https://redlinesystems.in/logo.png",
-              "description": "Redline Systems designs and deploys workstation, server, storage, and GPU infrastructure for engineering teams, studios, educational institutes, and businesses across Maharashtra.",
-              "sameAs": [
-                "https://www.instagram.com/redline_systems/"
-              ]
-            })
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Redline Systems",
+                "url": "https://redlinesystems.in",
+                "logo": "https://redlinesystems.in/logo.png",
+                "description": "Redline Systems designs and deploys workstation, server, storage, and GPU infrastructure for engineering teams, studios, educational institutes, and businesses across Maharashtra.",
+                "sameAs": [
+                  "https://www.instagram.com/redline_systems/"
+                ]
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "Redline Systems",
+                "image": "https://redlinesystems.in/logo.png",
+                "url": "https://redlinesystems.in",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressRegion": "Maharashtra",
+                  "addressCountry": "IN"
+                }
+              }
+            ])
+          }}
+        />
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW4MNFZ9RE"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-ZW4MNFZ9RE');
+            `
           }}
         />
       </head>
