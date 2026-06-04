@@ -85,6 +85,12 @@ export default function RootLayout({
                   "addressRegion": "Maharashtra",
                   "addressCountry": "IN"
                 }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Redline Systems",
+                "url": "https://redlinesystems.in/"
               }
             ])
           }}
