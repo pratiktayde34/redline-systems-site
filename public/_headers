@@ -1,0 +1,11 @@
+/images/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/logos/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.png
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.jpg
+  Cache-Control: public, max-age=0, must-revalidate
