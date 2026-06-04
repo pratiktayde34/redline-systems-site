@@ -58,6 +58,24 @@ export default function RootLayout({
       lang="en"
       className="h-full antialiased"
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Redline Systems",
+              "url": "https://redlinesystems.in",
+              "logo": "https://redlinesystems.in/logo.png",
+              "description": "Redline Systems designs and deploys workstation, server, storage, and GPU infrastructure for engineering teams, studios, educational institutes, and businesses across Maharashtra.",
+              "sameAs": [
+                "https://www.instagram.com/redline_systems/"
+              ]
+            })
+          }}
+        />
+      </head>
       <body className={`min-h-full flex flex-col bg-background text-foreground selection:bg-primary/30 selection:text-white ${googleSans.variable}`}>
         <SmoothScroll>
           <Navigation />
