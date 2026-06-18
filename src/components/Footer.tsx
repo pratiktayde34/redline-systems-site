@@ -14,8 +14,9 @@ export default function Footer() {
             <p className="text-muted font-light max-w-sm mb-8 leading-relaxed text-sm">
               Practical infrastructure engineering and deployment company focused on compute, storage, workstation, and on-premise systems for businesses across Maharashtra.
             </p>
-            <div className="flex flex-col gap-3">
-              <div className="flex items-center gap-3 mb-2">
+              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-0.5 mb-2 mt-2">
+                <span className="text-base font-bold text-faint tracking-wide uppercase">REDLINE SYSTEMS INDIA</span>
                 <span className="text-base font-bold text-faint tracking-wide">GSTIN: 27ABNFR9251L1ZE</span>
               </div>
               <div className="flex items-center gap-3 text-faint">
