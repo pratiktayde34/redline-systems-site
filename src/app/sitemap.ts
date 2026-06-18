@@ -62,6 +62,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/resources/archive`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
   ];
 
   // Dynamic Resource Articles
@@ -73,14 +79,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Dynamic Categories
-  const categories = ["ai-infrastructure", "storage-nas", "professional-workstations", "private-infrastructure", "industry-guides"];
-  const categoryRoutes: MetadataRoute.Sitemap = categories.map((cat) => ({
-    url: `${baseUrl}/resources/category/${cat}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.7,
-  }));
-
-  return [...routes, ...categoryRoutes, ...resourceRoutes];
+  return [...routes, ...resourceRoutes];
 }
