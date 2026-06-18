@@ -26,16 +26,16 @@ import SmoothScroll from "@/components/SmoothScroll";
 export const metadata: Metadata = {
   metadataBase: new URL("https://redlinesystems.in"),
   title: {
-    default: "Redline Systems | Server & Storage Infrastructure",
+    default: "Redline Systems | Workstations, Servers, NAS & AI Infrastructure",
     template: "%s | Redline Systems"
   },
-  description: "Redline Systems designs and deploys workstation, server, storage, and GPU infrastructure for engineering teams, studios, educational institutes, and businesses across Maharashtra.",
+  description: "Redline Systems designs and deploys workstations, NAS, servers, AI infrastructure, and private storage solutions for businesses, studios, educational institutions, and professionals across India.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Redline Systems | Server & Storage Infrastructure",
-    description: "Redline Systems designs and deploys workstation, server, storage, and GPU infrastructure for engineering teams, studios, educational institutes, and businesses across Maharashtra.",
+    title: "Redline Systems | Workstations, Servers, NAS & AI Infrastructure",
+    description: "Redline Systems designs and deploys workstations, NAS, servers, AI infrastructure, and private storage solutions for businesses, studios, educational institutions, and professionals across India.",
     url: "https://redlinesystems.in",
     siteName: "Redline Systems",
     images: [
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Redline Systems | Server & Storage Infrastructure",
-    description: "Redline Systems designs and deploys workstation, server, storage, and GPU infrastructure for engineering teams, studios, educational institutes, and businesses across Maharashtra.",
+    title: "Redline Systems | Workstations, Servers, NAS & AI Infrastructure",
+    description: "Redline Systems designs and deploys workstations, NAS, servers, AI infrastructure, and private storage solutions for businesses, studios, educational institutions, and professionals across India.",
     images: ['https://redlinesystems.in/og-image.jpg'],
   },
 };
@@ -78,7 +78,7 @@ export default function RootLayout({
                 "name": "Redline Systems",
                 "url": "https://redlinesystems.in",
                 "logo": "https://redlinesystems.in/logo.png",
-                "description": "Redline Systems designs and deploys workstation, server, storage, and GPU infrastructure for engineering teams, studios, educational institutes, and businesses across Maharashtra.",
+                "description": "Redline Systems designs and deploys workstations, NAS, servers, AI infrastructure, and private storage solutions for businesses, studios, educational institutions, and professionals across India.",
                 "sameAs": [
                   "https://www.instagram.com/redline_systems/"
                 ]
