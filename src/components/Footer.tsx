@@ -15,9 +15,12 @@ export default function Footer() {
               Practical infrastructure engineering and deployment company focused on compute, storage, workstation, and on-premise systems for businesses across Maharashtra.
             </p>
             <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-base font-bold text-faint tracking-wide">GSTIN: 27ABNFR9251L1ZE</span>
+              </div>
               <div className="flex items-center gap-3 text-faint">
-                <MapPin size={16} className="text-primary" />
-                <span className="text-sm">Aurangabad (Chhatrapati Sambhajinagar) & Pune</span>
+                <MapPin size={16} className="text-primary shrink-0" />
+                <span className="text-sm leading-tight">Aurangabad (Chhatrapati Sambhajinagar),<br/>Serving across Maharashtra.</span>
               </div>
               <div className="flex items-center gap-3 text-faint">
                 <Phone size={16} className="text-primary" />
