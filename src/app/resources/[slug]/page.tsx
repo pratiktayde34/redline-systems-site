@@ -38,9 +38,9 @@ const mdxComponents = {
   h1: (props: any) => <h1 className="font-display text-4xl font-bold tracking-tight mb-6 mt-12 text-white" {...props} />,
   h2: (props: any) => <h2 className="font-display text-2xl font-bold tracking-tight mb-4 mt-10 text-white border-b border-border pb-2" {...props} />,
   h3: (props: any) => <h3 className="font-display text-xl font-bold tracking-tight mb-4 mt-8 text-white" {...props} />,
-  p: (props: any) => <p className="text-muted leading-relaxed mb-6" {...props} />,
-  ul: (props: any) => <ul className="list-disc pl-6 mb-6 text-muted space-y-2 marker:text-primary" {...props} />,
-  ol: (props: any) => <ol className="list-decimal pl-6 mb-6 text-muted space-y-2 marker:text-primary" {...props} />,
+  p: (props: any) => <p className="text-white leading-relaxed mb-6" {...props} />,
+  ul: (props: any) => <ul className="list-disc pl-6 mb-6 text-white space-y-2 marker:text-primary" {...props} />,
+  ol: (props: any) => <ol className="list-decimal pl-6 mb-6 text-white space-y-2 marker:text-primary" {...props} />,
   li: (props: any) => <li className="pl-2" {...props} />,
   a: (props: any) => <a className="text-primary hover:text-white underline underline-offset-4 decoration-primary/50 transition-colors" {...props} />,
   strong: (props: any) => <strong className="text-white font-bold" {...props} />,
@@ -155,7 +155,7 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
                 {resource.title}
               </h1>
               
-              <p className="text-xl text-muted font-light leading-relaxed mb-12">
+              <p className="text-xl text-white font-light leading-relaxed mb-12">
                 {resource.description}
               </p>
 
