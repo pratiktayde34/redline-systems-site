@@ -74,33 +74,29 @@ export default function ResourcesHub() {
               </h2>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredResources.map((resource) => (
-                <Link href={`/resources/${resource.slug}`} key={resource.slug} className="group flex flex-col border border-border bg-surface hover:border-primary/50 transition-all overflow-hidden relative">
-                  <div className="aspect-[16/9] w-full overflow-hidden relative border-b border-border">
+                <Link href={`/resources/${resource.slug}`} key={resource.slug} className="group border border-border bg-surface hover:border-primary/50 transition-colors flex flex-col">
+                  <div className="aspect-video w-full overflow-hidden relative border-b border-border">
                     <img 
                       src={resource.coverImage} 
                       alt={resource.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
-                  <div className="p-8 flex flex-col flex-grow">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-xs font-bold uppercase tracking-widest text-primary">
-                        {resource.category}
-                      </span>
-                      <span className="text-xs text-muted">
-                        {new Date(resource.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                      </span>
-                    </div>
-                    <h3 className="font-display text-2xl font-bold mb-4 text-white group-hover:text-primary transition-colors">
+                  <div className="p-6 flex flex-col flex-grow">
+                    <span className="text-xs font-bold uppercase tracking-widest text-primary mb-3">
+                      {resource.category}
+                    </span>
+                    <h3 className="font-display text-lg font-bold mb-3 text-white">
                       {resource.title}
                     </h3>
-                    <p className="text-muted text-sm leading-relaxed mb-8 flex-grow">
+                    <p className="text-muted text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
                       {resource.description}
                     </p>
-                    <div className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 mt-auto">
-                      Read Article <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                    <div className="text-xs text-faint flex items-center justify-between mt-auto pt-4 border-t border-border/50">
+                      <span>{new Date(resource.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                      <ArrowUpRight size={16} className="group-hover:text-primary transition-colors" />
                     </div>
                   </div>
                 </Link>

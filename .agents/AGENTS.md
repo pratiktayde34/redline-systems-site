@@ -12,6 +12,8 @@ When the user asks to add a new blog post or article and provides content or a t
    - Name the file using a lowercase slug with hyphens (e.g., `topic-name.mdx`).
    - Include the correct YAML frontmatter: `title`, `description`, `date`, `category`, `coverImage` (pointing to `/images/...`), `seoTitle`, and `seoDescription`.
 
-3. **Image Placeholders & Instructions**:
-   - Insert placeholders for 2-3 images directly inside the MDX code using valid JSX comments (e.g., `{/* ![Description](/images/filename.jpg) */}`). **Do not use HTML comments (`<!-- -->`) as they will break the MDX compiler.**
-   - In the chat, explicitly tell the user exactly what images to add, the exact paths and filenames to use (saved in `public/images/`), and provide visual recommendations for what the image should look like to maximize impact and authority.
+3. **Images & Cover Art**:
+   - Always specify the `coverImage` in the YAML frontmatter.
+   - Only insert additional images into the body of the article if they are **absolutely necessary** to understand a complex technical topic (e.g., an architecture diagram or complex topology chart). Do not add images just for visual flair or "for the sake of adding images."
+   - When inserting a necessary body image, use standard markdown syntax (e.g., `![Description](/images/filename.jpg)`). Do NOT comment out the image tag itself.
+   - In the chat, explicitly list all required images (the cover image, plus any strictly necessary diagrams), their exact paths (`public/images/`), and provide a visual recommendation for what they should look like to maximize impact and authority.
