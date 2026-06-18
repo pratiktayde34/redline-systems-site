@@ -17,9 +17,11 @@ const CATEGORIES = [
 
 export default function ResourcesHub() {
   const allResources = getAllResources();
-  const featuredResources = getFeaturedResources();
+  // Limit featured resources to 3 (one complete row)
+  const featuredResources = getFeaturedResources().slice(0, 3);
   
-  const latestResources = allResources;
+  // Limit to the 6 most recent articles
+  const latestResources = allResources.slice(0, 6);
 
   return (
     <>
@@ -45,11 +47,10 @@ export default function ResourcesHub() {
               Categories:
             </span>
             {CATEGORIES.map((cat) => {
-              const catSlug = cat.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
               return (
                 <Link 
                   key={cat} 
-                  href={`/resources/category/${catSlug}`}
+                  href={`/resources/archive?category=${encodeURIComponent(cat)}`}
                   className="px-4 py-2 border border-border text-sm hover:border-primary hover:text-primary transition-colors cursor-pointer bg-background"
                 >
                   {cat}
@@ -140,6 +141,15 @@ export default function ResourcesHub() {
                 </div>
               </Link>
             ))}
+          </div>
+
+          <div className="mt-16 flex justify-center">
+            <Link
+              href="/resources/archive"
+              className="inline-flex items-center gap-3 border border-border bg-background hover:border-primary/50 text-white text-sm font-bold uppercase tracking-widest px-8 py-4 transition-all"
+            >
+              View All Articles <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
