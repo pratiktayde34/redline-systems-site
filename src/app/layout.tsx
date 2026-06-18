@@ -38,6 +38,14 @@ export const metadata: Metadata = {
     description: "Redline Systems designs and deploys workstation, server, storage, and GPU infrastructure for engineering teams, studios, educational institutes, and businesses across Maharashtra.",
     url: "https://redlinesystems.in",
     siteName: "Redline Systems",
+    images: [
+      {
+        url: 'https://redlinesystems.in/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Redline Systems Logo',
+      },
+    ],
     locale: "en_IN",
     type: "website",
   },
@@ -45,6 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Redline Systems | Server & Storage Infrastructure",
     description: "Redline Systems designs and deploys workstation, server, storage, and GPU infrastructure for engineering teams, studios, educational institutes, and businesses across Maharashtra.",
+    images: ['https://redlinesystems.in/logo.png'],
   },
 };
 
