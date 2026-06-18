@@ -1,11 +1,13 @@
 import { MetadataRoute } from 'next';
+import { getAllResources, getResourceSlugs } from '@/lib/resources';
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://redlinesystems.in';
-
-  return [
+  
+  // Static Routes
+  const routes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -49,10 +51,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/resources`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
   ];
+
+  // Dynamic Resource Articles
+  const resources = getAllResources();
+  const resourceRoutes: MetadataRoute.Sitemap = resources.map((resource) => ({
+    url: `${baseUrl}/resources/${resource.slug}`,
+    lastModified: new Date(resource.date),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
+  // Dynamic Categories
+  const categories = ["ai-infrastructure", "storage-nas", "professional-workstations", "private-infrastructure", "industry-guides"];
+  const categoryRoutes: MetadataRoute.Sitemap = categories.map((cat) => ({
+    url: `${baseUrl}/resources/category/${cat}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  }));
+
+  return [...routes, ...categoryRoutes, ...resourceRoutes];
 }

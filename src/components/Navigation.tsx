@@ -19,6 +19,18 @@ const links = [
       { href: "/solutions", label: "View all solutions" },
     ]
   },
+  { 
+    label: "Resources", 
+    href: "/resources",
+    dropdown: [
+      { href: "/resources/category/ai-infrastructure", label: "AI Infrastructure" },
+      { href: "/resources/category/storage-nas", label: "Storage & NAS" },
+      { href: "/resources/category/professional-workstations", label: "Professional Workstations" },
+      { href: "/resources/category/private-infrastructure", label: "Private Infrastructure" },
+      { href: "/resources/category/industry-guides", label: "Industry Guides" },
+      { href: "/resources", label: "View all resources" },
+    ]
+  },
   { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact" },
 ];

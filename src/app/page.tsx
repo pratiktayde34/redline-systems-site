@@ -120,7 +120,7 @@ export default function Home() {
               Infrastructure Categories
             </h2>
           </div>
-
+            
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link href="/ai-gpu" className="relative p-10 group overflow-hidden border border-border hover:border-primary/50 transition-colors flex flex-col min-h-[320px]">
               <div 
