@@ -19,10 +19,7 @@ export default function ResourcesHub() {
   const allResources = getAllResources();
   const featuredResources = getFeaturedResources();
   
-  // Exclude featured from latest to avoid immediate duplication
-  const latestResources = allResources.filter(
-    (res) => !featuredResources.find((f) => f.slug === res.slug)
-  );
+  const latestResources = allResources;
 
   return (
     <>

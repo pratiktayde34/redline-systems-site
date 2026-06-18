@@ -65,7 +65,7 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
 
   const allResources = getAllResources();
   const featuredResources = getFeaturedResources().filter(r => r.slug !== resource.slug).slice(0, 3);
-  const latestResources = allResources.filter(r => r.slug !== resource.slug && !featuredResources.find(f => f.slug === r.slug)).slice(0, 3);
+  const latestResources = allResources.filter(r => r.slug !== resource.slug).slice(0, 3);
   const similarCategory = getRelatedResources(resource.category, resource.slug).slice(0, 3);
 
   // Structured Data
