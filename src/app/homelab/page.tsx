@@ -82,7 +82,7 @@ export default function Homelab() {
             </div>
           </div>
           <div className="text-center">
-            <h3 className="font-display text-2xl font-bold text-white">What if you could own the infrastructure instead?</h3>
+            <h3 className="font-display text-2xl font-bold text-white">A Homelab Is More Than Storage</h3>
           </div>
         </div>
       </section>
