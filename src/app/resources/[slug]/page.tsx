@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight, ArrowUpRight, ArrowLeft } from "lucide-react";
 import { getResourceBySlug, getResourceSlugs, getRelatedResources, getAllResources, getFeaturedResources } from "@/lib/resources";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkRedline from "@/lib/remarkRedline";
 
 export async function generateStaticParams() {
   const slugs = getResourceSlugs();
@@ -168,7 +169,15 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
               </div>
 
               <article className="prose-container">
-                <MDXRemote source={resource.content} components={mdxComponents} />
+                <MDXRemote 
+                  source={resource.content} 
+                  components={mdxComponents} 
+                  options={{
+                    mdxOptions: {
+                      remarkPlugins: [remarkRedline],
+                    }
+                  }}
+                />
               </article>
             </div>
 

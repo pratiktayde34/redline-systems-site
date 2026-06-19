@@ -81,7 +81,7 @@ export default function Contact() {
               </div>
 
               <div className="bg-surface border border-border p-8">
-                <h3 className="font-display text-xl font-bold mb-4">Why Redline Systems?</h3>
+                <h3 className="font-display text-xl font-bold mb-4">Why <span className="text-primary">Red</span>line Systems?</h3>
                 <ul className="flex flex-col gap-4">
                   <li className="flex items-start gap-3"><CheckCircle2 className="text-primary shrink-0" size={20} /> <span className="text-muted text-sm leading-relaxed">Built around workloads, not generic configurations.</span></li>
                   <li className="flex items-start gap-3"><CheckCircle2 className="text-primary shrink-0" size={20} /> <span className="text-muted text-sm leading-relaxed">Local on-site deployment and support across Maharashtra.</span></li>

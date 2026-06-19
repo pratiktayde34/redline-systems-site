@@ -17,3 +17,11 @@ When the user asks to add a new blog post or article and provides content or a t
    - Only insert additional images into the body of the article if they are **absolutely necessary** to understand a complex technical topic (e.g., an architecture diagram or complex topology chart). Do not add images just for visual flair or "for the sake of adding images."
    - When inserting a necessary body image, use standard markdown syntax (e.g., `![Description](/images/filename.jpg)`). Do NOT comment out the image tag itself.
    - In the chat, explicitly list all required images (the cover image, plus any strictly necessary diagrams), their exact paths (`public/images/`), and provide a visual recommendation for what they should look like to maximize impact and authority.
+
+# Rule: Global Brand Formatting
+
+Whenever you write the brand name "Redline" (or "REDLINE") in a React component, you must perfectly colorize the "Red" prefix by wrapping it in a span:
+- For "Redline": `<span className="text-primary">Red</span>line`
+- For "REDLINE": `<span className="text-primary">RED</span>LINE`
+
+Note: You do **not** need to do this when writing `.mdx` articles or SEO metadata, because a custom AST compiler plugin automatically handles it for `.mdx` files, and metadata does not support HTML tags. Only do this manually when editing static `.tsx` layout or page components.

@@ -268,7 +268,7 @@ export default function Homelab() {
             </div>
           </div>
           <div>
-            <h2 className="font-display text-3xl font-bold mb-10">Why Redline Systems?</h2>
+            <h2 className="font-display text-3xl font-bold mb-10">Why <span className="text-primary">Red</span>line Systems?</h2>
             <div className="flex flex-col gap-4">
               {[
                 "Custom built for your specific use case",

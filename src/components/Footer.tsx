@@ -16,8 +16,8 @@ export default function Footer() {
             </p>
               <div className="flex flex-col gap-3">
               <div className="flex flex-col gap-0.5 mb-2 mt-2">
-                <span className="text-base font-bold text-faint tracking-wide uppercase">REDLINE SYSTEMS INDIA</span>
-                <span className="text-base font-bold text-faint tracking-wide">GSTIN: 27ABNFR9251L1ZE</span>
+                <span className="text-base font-bold text-white tracking-wide uppercase"><span className="text-primary">RED</span>LINE SYSTEMS INDIA</span>
+                <span className="text-base font-bold text-white tracking-wide">GSTIN: 27ABNFR9251L1ZE</span>
               </div>
               <div className="flex items-center gap-3 text-faint">
                 <MapPin size={16} className="text-primary shrink-0" />
@@ -40,7 +40,7 @@ export default function Footer() {
 
           <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
             <div>
-              <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-faint mb-6">Solutions</h4>
+              <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-white mb-6">Solutions</h4>
               <ul className="flex flex-col gap-3">
                 <li><Link href="/ai-gpu" className="text-muted hover:text-primary transition-colors text-sm">AI Infrastructure</Link></li>
                 <li><Link href="/storage" className="text-muted hover:text-primary transition-colors text-sm">Storage & NAS</Link></li>
@@ -51,7 +51,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-faint mb-6">Resources</h4>
+              <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-white mb-6">Resources</h4>
               <ul className="flex flex-col gap-3">
                 <li><Link href="/resources/archive" className="text-muted hover:text-primary transition-colors text-sm">All Articles</Link></li>
                 <li><Link href="/resources/archive?category=AI%20Infrastructure" className="text-muted hover:text-primary transition-colors text-sm">AI Infrastructure</Link></li>
@@ -62,7 +62,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-faint mb-6">Enterprise Platforms</h4>
+              <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-white mb-6">Enterprise Platforms</h4>
               <ul className="flex flex-col gap-3">
                 <li className="text-muted text-sm">VMware vSphere</li>
                 <li className="text-muted text-sm">Red Hat OpenShift</li>
@@ -73,11 +73,11 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-faint mb-6">Legal</h4>
-              <ul className="flex flex-col gap-3">
-                <li className="text-muted text-sm">Privacy Policy</li>
-                <li className="text-muted text-sm">Terms & Conditions</li>
-              </ul>
+              <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-white mb-6">Legal</h4>
+              <div className="flex flex-col gap-2">
+                <Link href="/privacy-policy" className="text-sm hover:text-white transition-colors">Privacy Policy</Link>
+                <Link href="/terms-and-conditions" className="text-sm hover:text-white transition-colors">Terms & Conditions</Link>
+              </div>
             </div>
           </div>
 
@@ -85,10 +85,10 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-faint text-xs">
-            &copy; {new Date().getFullYear()} Redline Systems. All rights reserved.
+            &copy; {new Date().getFullYear()} <span className="text-primary">Red</span>line Systems. All rights reserved.
           </p>
           <div className="text-faint text-xs uppercase tracking-widest font-bold">
-            Operationally Reliable Infrastructure
+            COMPUTE &bull; STORAGE &bull; AI
           </div>
         </div>
       </div>
