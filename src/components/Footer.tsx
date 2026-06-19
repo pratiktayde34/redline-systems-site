@@ -5,9 +5,9 @@ export default function Footer() {
   return (
     <footer className="bg-surface border-t border-border mt-16">
       <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
           
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-5">
             <Link href="/" className="flex items-center mb-6">
               <img loading="lazy" decoding="async" src="/logo.png" alt="Redline Systems" className="h-10 w-auto opacity-90" />
             </Link>
@@ -21,7 +21,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3 text-faint">
                 <MapPin size={16} className="text-primary shrink-0" />
-                <span className="text-sm leading-tight">Aurangabad (Chhatrapati Sambhajinagar),<br/>Serving across Maharashtra.</span>
+                <span className="text-sm leading-tight">Chhatrapati Sambhajinagar, Maharashtra<br/>Serving clients across India.</span>
               </div>
               <div className="flex items-center gap-3 text-faint">
                 <Phone size={16} className="text-primary" />
@@ -38,40 +38,47 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-faint mb-6">Categories</h4>
-            <ul className="flex flex-col gap-3">
-              <li><Link href="/ai-gpu" className="text-muted hover:text-primary transition-colors text-sm">AI & GPU Infrastructure</Link></li>
-              <li><Link href="/storage" className="text-muted hover:text-primary transition-colors text-sm">NAS & Shared Storage</Link></li>
-              <li><Link href="/workstations" className="text-muted hover:text-primary transition-colors text-sm">Engineering Workstations</Link></li>
-              <li><Link href="/solutions" className="text-muted hover:text-primary transition-colors text-sm">Educational Labs</Link></li>
-            </ul>
-          </div>
+          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-faint mb-6">Solutions</h4>
+              <ul className="flex flex-col gap-3">
+                <li><Link href="/ai-gpu" className="text-muted hover:text-primary transition-colors text-sm">AI Infrastructure</Link></li>
+                <li><Link href="/storage" className="text-muted hover:text-primary transition-colors text-sm">Storage & NAS</Link></li>
+                <li><Link href="/workstations" className="text-muted hover:text-primary transition-colors text-sm">Workstations</Link></li>
+                <li><Link href="/homelab" className="text-muted hover:text-primary transition-colors text-sm">Homelab</Link></li>
+                <li><Link href="/solutions" className="text-muted hover:text-primary transition-colors text-sm">Educational Labs</Link></li>
+              </ul>
+            </div>
 
-          <div>
-            <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-faint mb-6">Operations</h4>
-            <ul className="flex flex-col gap-3">
-              <li className="text-muted text-sm flex items-center gap-2">
-                <span>Response Time:</span>
-                <span className="text-white font-medium">&lt; 24h</span>
-              </li>
-              <li className="text-muted text-sm flex items-center gap-2">
-                <span>On-site Deployment:</span>
-                <span className="text-primary font-medium">Available</span>
-              </li>
-              <li className="mt-2"><Link href="/contact" className="text-muted hover:text-white transition-colors text-sm">Contact Support</Link></li>
-              <li><Link href="/contact" className="text-muted hover:text-white transition-colors text-sm">Request Consultation</Link></li>
-            </ul>
-          </div>
+            <div>
+              <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-faint mb-6">Resources</h4>
+              <ul className="flex flex-col gap-3">
+                <li><Link href="/resources/archive" className="text-muted hover:text-primary transition-colors text-sm">All Articles</Link></li>
+                <li><Link href="/resources/archive?category=AI%20Infrastructure" className="text-muted hover:text-primary transition-colors text-sm">AI Infrastructure</Link></li>
+                <li><Link href="/resources/archive?category=Storage%20%26%20NAS" className="text-muted hover:text-primary transition-colors text-sm">Storage & NAS</Link></li>
+                <li><Link href="/resources/archive?category=Professional%20Workstations" className="text-muted hover:text-primary transition-colors text-sm">Workstations</Link></li>
+                <li><Link href="/resources/archive?category=Industry%20Guides" className="text-muted hover:text-primary transition-colors text-sm">Industry Guides</Link></li>
+              </ul>
+            </div>
 
-          <div>
-            <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-faint mb-6">Supported Platforms</h4>
-            <ul className="flex flex-col gap-3">
-              <li className="text-muted text-sm">NVIDIA / AMD / Intel</li>
-              <li className="text-muted text-sm">TrueNAS / ZFS</li>
-              <li className="text-muted text-sm">Proxmox / VMware</li>
-              <li className="text-muted text-sm">Ubuntu Server</li>
-            </ul>
+            <div>
+              <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-faint mb-6">Enterprise Platforms</h4>
+              <ul className="flex flex-col gap-3">
+                <li className="text-muted text-sm">VMware vSphere</li>
+                <li className="text-muted text-sm">Red Hat OpenShift</li>
+                <li className="text-muted text-sm">TrueNAS Enterprise</li>
+                <li className="text-muted text-sm">NVIDIA AI Enterprise</li>
+                <li className="text-muted text-sm">Proxmox VE</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-faint mb-6">Legal</h4>
+              <ul className="flex flex-col gap-3">
+                <li className="text-muted text-sm">Privacy Policy</li>
+                <li className="text-muted text-sm">Terms & Conditions</li>
+              </ul>
+            </div>
           </div>
 
         </div>
