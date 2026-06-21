@@ -18,10 +18,12 @@ const googleSans = localFont({
   variable: '--font-google-sans',
   display: 'swap',
 });
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import SmoothScroll from "@/components/SmoothScroll";
+import HideOnConnect from "@/components/HideOnConnect";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://redlinesystems.in"),
@@ -119,10 +121,14 @@ export default function RootLayout({
       </head>
       <body className={`min-h-full flex flex-col bg-background text-foreground selection:bg-primary/30 selection:text-white ${googleSans.variable}`}>
         <SmoothScroll>
-          <Navigation />
+          <HideOnConnect>
+            <Navigation />
+          </HideOnConnect>
           <main className="flex-grow flex flex-col">{children}</main>
-          <Footer />
-          <FloatingWhatsApp />
+          <HideOnConnect>
+            <Footer />
+            <FloatingWhatsApp />
+          </HideOnConnect>
         </SmoothScroll>
       </body>
     </html>
