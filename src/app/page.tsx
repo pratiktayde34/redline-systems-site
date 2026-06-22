@@ -115,7 +115,6 @@ export default function Home() {
       <section className="py-24 bg-surface border-y border-border">
         <div className="container mx-auto px-6">
           <div className="flex items-center gap-4 mb-16">
-            <div className="w-12 h-[2px] bg-primary"></div>
             <h2 className="font-display text-3xl font-bold tracking-tight">
               Infrastructure Categories
             </h2>
@@ -209,7 +208,7 @@ export default function Home() {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-display text-3xl font-bold tracking-tight mb-4">Typical Infrastructure Deployments</h2>
+            <h2 className="font-display text-3xl font-bold tracking-tight mb-4">Infrastructure Deployments</h2>
             <p className="text-muted max-w-2xl mx-auto">Systems engineered, built, and deployed on-site across Maharashtra.</p>
           </div>
           

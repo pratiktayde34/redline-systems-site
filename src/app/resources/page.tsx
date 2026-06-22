@@ -66,7 +66,6 @@ export default function ResourcesHub() {
         <section className="py-24 bg-background">
           <div className="container mx-auto px-6">
             <div className="flex items-center gap-4 mb-12">
-              <div className="w-8 h-[2px] bg-primary"></div>
               <h2 className="font-display text-2xl font-bold tracking-tight">
                 Featured 
               </h2>
@@ -108,7 +107,6 @@ export default function ResourcesHub() {
       <section className="py-24 bg-surface border-t border-border">
         <div className="container mx-auto px-6">
           <div className="flex items-center gap-4 mb-12">
-            <div className="w-8 h-[2px] bg-primary"></div>
             <h2 className="font-display text-2xl font-bold tracking-tight">
               Latest Releases
             </h2>

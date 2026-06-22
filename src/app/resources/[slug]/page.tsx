@@ -98,8 +98,7 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
     
     return (
       <div className="bg-surface border border-border p-6">
-        <div className="flex items-center gap-3 mb-6">
-          <div className="w-4 h-[2px] bg-primary"></div>
+        <div className="mb-6">
           <h3 className="font-display text-lg font-bold text-white tracking-tight">{title}</h3>
         </div>
         
