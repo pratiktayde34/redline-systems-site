@@ -37,18 +37,13 @@ export default function Home() {
 
         <div className="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center px-4 py-2 border border-primary/30 bg-primary/10 backdrop-blur-sm mb-6">
-              <span className="font-display text-[11px] font-bold tracking-[0.2em] uppercase text-white">
-                Infrastructure Engineered for Workloads
-              </span>
-            </div>
             
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6">
-              On-Premise Compute, Storage & <span className="text-primary">AI Infrastructure</span>
+              On-Prem Infra for <span className="text-primary">Mission-Critical</span> Workloads
             </h1>
             
             <p className="text-lg text-muted mb-10 max-w-xl font-light leading-relaxed">
-              Practical deployment of workstation, server, storage, and GPU infrastructure for engineering teams, studios, educational institutes, and businesses.
+              Purpose-built compute, storage, and AI systems for businesses, creators, educational institutes and power users.
             </p>
             
             <div className="flex flex-wrap items-center gap-6">
@@ -60,7 +55,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/solutions"
-                className="text-white text-sm font-bold uppercase tracking-widest px-4 py-4 border-b border-faint hover:border-white transition-all flex items-center gap-2"
+                className="border border-primary text-primary hover:bg-primary hover:text-white text-sm font-bold uppercase tracking-widest px-8 py-4 transition-all hover:-translate-y-0.5 flex items-center gap-2"
               >
                 Explore Solutions
               </Link>
@@ -85,7 +80,7 @@ export default function Home() {
               <img loading="lazy" decoding="async" src="/logos/truenas.svg" alt="TrueNAS" className="h-8 w-auto object-contain" />
               <img loading="lazy" decoding="async" src="/logos/supermicro.svg" alt="Supermicro" className="h-8 w-auto object-contain" />
               <img loading="lazy" decoding="async" src="/logos/proxmox.svg" alt="Proxmox" className="h-8 w-auto object-contain" />
-              <img loading="lazy" decoding="async" src="/logos/ubuntu.svg" alt="Ubuntu Server" className="h-8 w-auto object-contain" />
+              <img loading="lazy" decoding="async" src="/logos/openshift.svg" alt="OpenShift" className="h-8 w-auto object-contain" />
               <img loading="lazy" decoding="async" src="/logos/vmware.svg" alt="VMware" className="h-8 w-auto object-contain" />
             </div>
           </div>
@@ -96,17 +91,28 @@ export default function Home() {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-display text-3xl font-bold tracking-tight mb-4">Workloads We Support</h2>
-            <p className="text-muted max-w-2xl mx-auto">Hardware engineered specifically for professional pipelines and intensive compute.</p>
+            <h2 className="font-display text-3xl font-bold tracking-tight mb-4">Built for Professional Workloads</h2>
+            <p className="text-muted max-w-2xl mx-auto">We build machines certified and optimized for professional pipelines and intensive compute.</p>
           </div>
           
-          <div className="flex flex-wrap justify-center items-center gap-16 max-w-5xl mx-auto">
-            <img loading="lazy" decoding="async" src="/logos/blender.svg" alt="Blender" className="h-8 w-auto object-contain" title="Blender" />
-            <img loading="lazy" decoding="async" src="/logos/davinciresolve.svg" alt="DaVinci Resolve" className="h-8 w-auto object-contain" title="DaVinci Resolve" />
-            <img loading="lazy" decoding="async" src="/logos/unrealengine.svg" alt="Unreal Engine" className="h-8 w-auto object-contain" title="Unreal Engine" />
-            <img loading="lazy" decoding="async" src="/logos/solidworks.svg" alt="SolidWorks" className="h-8 w-auto object-contain" title="SolidWorks" />
-            <img loading="lazy" decoding="async" src="/logos/autodesk.svg" alt="Revit / AutoCAD" className="h-8 w-auto object-contain" title="AutoCAD / Revit" />
-            <img loading="lazy" decoding="async" src="/logos/pytorch.svg" alt="PyTorch" className="h-8 w-auto object-contain" title="PyTorch" />
+          <div className="flex flex-wrap justify-center gap-6 max-w-3xl mx-auto">
+            {[
+              "SOLIDWORKS", "Revit", "ANSYS", "MATLAB", 
+              "DaVinci Resolve", "PyTorch", "Fusion"
+            ].map(app => (
+              <div key={app} className="flex flex-col items-center gap-3 group w-20">
+                <div className="w-20 h-20 rounded-xl overflow-hidden bg-background border border-border group-hover:border-primary/50 transition-colors flex items-center justify-center shadow-md">
+                  <img fetchPriority="high" decoding="async" 
+                    src={`/images/icons/${app.toLowerCase().replace(/ /g, '-')}.png`} 
+                    alt={app} 
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
+                </div>
+                <span className="text-[10px] font-bold text-muted group-hover:text-white transition-colors text-center tracking-wide uppercase">
+                  {app}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -116,7 +122,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex items-center gap-4 mb-16">
             <h2 className="font-display text-3xl font-bold tracking-tight">
-              Infrastructure Categories
+              Solutions
             </h2>
           </div>
             
@@ -136,7 +142,7 @@ export default function Home() {
                   Multi-GPU compute systems for AI inferencing, training, simulation, and accelerated workloads.
                 </p>
                 <div className="text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-primary transition-colors flex items-center gap-2 mt-auto">
-                  Explore Specs <ArrowRight size={14} />
+                  Explore <ArrowRight size={14} />
                 </div>
               </div>
             </Link>
@@ -156,7 +162,7 @@ export default function Home() {
                   High-capacity shared storage systems with redundancy, backup automation, and multi-user access.
                 </p>
                 <div className="text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-primary transition-colors flex items-center gap-2 mt-auto">
-                  Explore Specs <ArrowRight size={14} />
+                  Explore <ArrowRight size={14} />
                 </div>
               </div>
             </Link>
@@ -176,7 +182,7 @@ export default function Home() {
                   Threadripper and professional workstation systems built for CAD, rendering, BIM, and simulation workloads.
                 </p>
                 <div className="text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-primary transition-colors flex items-center gap-2 mt-auto">
-                  Explore Specs <ArrowRight size={14} />
+                  Explore <ArrowRight size={14} />
                 </div>
               </div>
             </Link>
@@ -196,7 +202,7 @@ export default function Home() {
                   Take back control of your data with self-hosted media, storage, and application infrastructure.
                 </p>
                 <div className="text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-primary transition-colors flex items-center gap-2 mt-auto">
-                  Explore Specs <ArrowRight size={14} />
+                  Explore <ArrowRight size={14} />
                 </div>
               </div>
             </Link>
@@ -208,7 +214,7 @@ export default function Home() {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-display text-3xl font-bold tracking-tight mb-4">Infrastructure Deployments</h2>
+            <h2 className="font-display text-3xl font-bold tracking-tight mb-4">Our Deployments</h2>
             <p className="text-muted max-w-2xl mx-auto">Systems engineered, built, and deployed on-site across Maharashtra.</p>
           </div>
           
@@ -265,11 +271,6 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-16">
             <div className="lg:w-1/3">
               <div className="sticky top-32">
-                <div className="inline-flex items-center px-4 py-2 border border-primary/30 bg-primary/10 backdrop-blur-sm mb-6">
-                  <span className="font-display text-[11px] font-bold tracking-[0.2em] uppercase text-white">
-                    Deployment Workflow
-                  </span>
-                </div>
                 <h2 className="font-display text-3xl font-bold tracking-tight mb-6">
                   How We Deploy
                 </h2>

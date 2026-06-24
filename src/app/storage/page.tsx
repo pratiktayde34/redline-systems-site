@@ -20,11 +20,6 @@ export default function StorageBackup() {
       <section className="relative min-h-[60vh] flex items-center pt-32 pb-24 overflow-hidden bg-background border-b border-border">
         <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-flex items-center px-4 py-2 border border-primary/30 bg-primary/10 backdrop-blur-sm mb-6">
-              <span className="font-display text-[11px] font-bold tracking-[0.2em] uppercase text-white">
-                High-Availability Data Architectures
-              </span>
-            </div>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Centralized Storage Engineered For Uptime
             </h1>

@@ -39,11 +39,6 @@ export default function AboutPage() {
       {/* OUR STORY */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6 max-w-4xl">
-          <div className="inline-flex items-center px-4 py-2 border border-primary/30 bg-primary/10 backdrop-blur-sm mb-6">
-            <span className="font-display text-[11px] font-bold tracking-[0.2em] uppercase text-white">
-              Why We Started
-            </span>
-          </div>
           <h2 className="font-display text-3xl font-bold tracking-tight mb-10">Our Story</h2>
           
           <div className="prose prose-invert prose-lg max-w-none text-muted">
@@ -142,11 +137,6 @@ export default function AboutPage() {
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
             <div>
-              <div className="inline-flex items-center px-4 py-2 border border-primary/30 bg-primary/10 backdrop-blur-sm mb-6">
-                <span className="font-display text-[11px] font-bold tracking-[0.2em] uppercase text-white">
-                  Where We Are Going
-                </span>
-              </div>
               <h2 className="font-display text-3xl font-bold tracking-tight mb-6">Our Vision</h2>
               <div className="text-muted space-y-4">
                 <p>
@@ -159,11 +149,6 @@ export default function AboutPage() {
             </div>
             
             <div>
-              <div className="inline-flex items-center px-4 py-2 border border-primary/30 bg-primary/10 backdrop-blur-sm mb-6">
-                <span className="font-display text-[11px] font-bold tracking-[0.2em] uppercase text-white">
-                  The Future
-                </span>
-              </div>
               <h2 className="font-display text-3xl font-bold tracking-tight mb-6">The Road Ahead</h2>
               <div className="text-muted space-y-4">
                 <p>

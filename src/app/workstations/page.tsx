@@ -19,11 +19,6 @@ export default function Workstations() {
       {/* 1. HERO */}
       <section className="relative min-h-[60vh] flex items-center pt-32 pb-24 overflow-hidden bg-background border-b border-border">
         <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
-          <div className="inline-flex items-center justify-center px-4 py-2 border border-primary/30 bg-primary/10 backdrop-blur-sm mb-6 mx-auto">
-            <span className="font-display text-[11px] font-bold tracking-[0.2em] uppercase text-white">
-              Professional Workstation OEM
-            </span>
-          </div>
           <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6">
             Engineered For Professional Pipelines
           </h1>
