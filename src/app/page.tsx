@@ -78,7 +78,7 @@ export default function Home() {
               <img loading="lazy" decoding="async" src="/logos/amd.svg" alt="AMD EPYC" className="h-8 w-auto object-contain" />
               <img loading="lazy" decoding="async" src="/logos/intel.svg" alt="Intel Xeon" className="h-8 w-auto object-contain" />
               <img loading="lazy" decoding="async" src="/logos/truenas.svg" alt="TrueNAS" className="h-8 w-auto object-contain" />
-              <img loading="lazy" decoding="async" src="/logos/supermicro.svg" alt="Supermicro" className="h-8 w-auto object-contain" />
+              <img loading="lazy" decoding="async" src="/logos/supermicro.svg?v=2" alt="Supermicro" className="h-8 w-auto object-contain" />
               <img loading="lazy" decoding="async" src="/logos/proxmox.svg" alt="Proxmox" className="h-8 w-auto object-contain" />
               <img loading="lazy" decoding="async" src="/logos/openshift.svg" alt="OpenShift" className="h-8 w-auto object-contain" />
               <img loading="lazy" decoding="async" src="/logos/vmware.svg" alt="VMware" className="h-8 w-auto object-contain" />
