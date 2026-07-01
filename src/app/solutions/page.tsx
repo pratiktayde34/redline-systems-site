@@ -106,7 +106,7 @@ export default function Solutions() {
           {/* Solution 4: Homelab */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="h-[400px] border border-border rounded overflow-hidden">
-              <img loading="lazy" decoding="async" src="/images/solutions-homelab.png" alt="Custom Homelab" className="w-full h-full object-cover opacity-70" />
+              <img loading="lazy" decoding="async" src="/images/solutions-homelab.png?v=3" alt="Custom Homelab" className="w-full h-full object-cover opacity-70" />
             </div>
             <div>
               <div className="flex items-center gap-3 mb-4">

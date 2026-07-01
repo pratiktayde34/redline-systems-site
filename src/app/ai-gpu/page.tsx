@@ -126,7 +126,7 @@ export default function AIGPU() {
                   </p>
                 </div>
                 <div className="relative h-48 md:h-full w-full">
-                  <img loading="lazy" decoding="async" src="/images/ai-gpu-lab.jpg" alt="Lab setup" className="w-full h-full object-cover rounded border border-border opacity-70" />
+                  <img loading="lazy" decoding="async" src="/images/ai-gpu-lab.jpg?v=3" alt="Lab setup" className="w-full h-full object-cover rounded border border-border opacity-70" />
                 </div>
               </div>
             </div>

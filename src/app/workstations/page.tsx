@@ -47,7 +47,7 @@ export default function Workstations() {
             
             {/* CAD & BIM */}
             <div className="bg-background border border-border flex flex-col hover:border-primary/30 transition-colors">
-              <img loading="lazy" decoding="async" src="/images/workstations-engineering.jpg" alt="Engineering Setup" className="w-full h-64 object-cover border-b border-border opacity-80" />
+              <img loading="lazy" decoding="async" src="/images/workstations-engineering.jpg?v=3" alt="Engineering Setup" className="w-full h-64 object-cover border-b border-border opacity-80" />
               <div className="p-10 flex flex-col flex-grow">
                 <h3 className="font-display text-2xl font-bold mb-4">CAD & BIM Workstations</h3>
                 <p className="text-muted leading-relaxed text-sm mb-6 flex-grow">
@@ -61,7 +61,7 @@ export default function Workstations() {
 
             {/* Rendering */}
             <div className="bg-background border border-border flex flex-col hover:border-primary/30 transition-colors">
-              <img loading="lazy" decoding="async" src="/images/cad-workstation-solidworks-revit-autocad.jpg" alt="Rendering Setup" className="w-full h-64 object-cover border-b border-border opacity-80" />
+              <img loading="lazy" decoding="async" src="/images/cad-workstation-solidworks-revit-autocad.jpg?v=3" alt="Rendering Setup" className="w-full h-64 object-cover border-b border-border opacity-80" />
               <div className="p-10 flex flex-col flex-grow">
                 <h3 className="font-display text-2xl font-bold mb-4">Simulation & Rendering</h3>
                 <p className="text-muted leading-relaxed text-sm mb-6 flex-grow">

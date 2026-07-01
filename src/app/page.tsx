@@ -10,7 +10,7 @@ export default function Home() {
         {/* Darkened Background */}
         <div className="absolute inset-0 z-0">
           <img fetchPriority="high" decoding="async" 
-            src="/images/hero-bg.jpg" 
+            src="/images/hero-bg.jpg?v=3" 
             alt="Data Center" 
             className="w-full h-full object-cover opacity-25"
           />
@@ -28,7 +28,7 @@ export default function Home() {
           }}
         >
           <img loading="lazy" decoding="async" 
-            src="/images/hero-bg.jpg" 
+            src="/images/hero-bg.jpg?v=3" 
             alt="Data Center" 
             className="w-full h-full object-cover opacity-40 mix-blend-lighten" 
           />
@@ -190,7 +190,7 @@ export default function Home() {
             <Link href="/homelab" className="relative p-10 group overflow-hidden border border-border hover:border-primary/50 transition-colors flex flex-col min-h-[320px]">
               <div 
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
-                style={{ backgroundImage: 'url("/images/solutions-homelab.png")' }}
+                style={{ backgroundImage: 'url("/images/solutions-homelab.png?v=3")' }}
               />
               <div className="absolute inset-0 bg-black/85 group-hover:bg-black/75 transition-colors duration-300" />
               <div className="absolute top-0 left-0 w-1 h-0 bg-primary group-hover:h-full transition-all duration-300 z-10"></div>
